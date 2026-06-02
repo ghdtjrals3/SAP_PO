@@ -40,7 +40,7 @@
 사용자 실행 환경에 따라 생성과 조회 프로세스를 동적으로 분기하며, DB와 스크린 제어를 수행합니다.
 
 <div align="center">
-  <img src="images/vendor_flow.png" alt="구매처 생성 및 조회 프로세스 흐름도" width="70%">
+  <img src="images/구매처생성흐름도.png" alt="구매처 생성 및 조회 프로세스 흐름도" width="70%">
   <p><em>(PDF Page 3 - 구매처 생성 흐름도 및 요구 기능 정의 참고)</em></p>
 </div>
 
@@ -48,15 +48,13 @@
 아이템 생성 시 마스터 데이터 연동 검증을 거쳐 최종적으로 트랜잭션 저장이 완료됩니다.
 
 <div align="center">
-  <img src="images/po_flow.png" alt="PO 생성 프로세스 흐름도" width="70%">
+  <img src="images/구매오더생성흐름도.png" alt="PO 생성 프로세스 흐름도" width="70%">
   <p><em>(PDF Page 19 - PO 생성 흐름도 및 요구 기능 정의 참고)</em></p>
 </div>
 
 ---
 
 ### 2. 데이터베이스 스키마 설계 (Database Tables)
-
-효율적인 데이터 정규화 및 트랜잭션 무결성을 위해 총 4개의 테이블을 구성하였습니다.
 
 #### 2.1 구매처 테이블 (`ZEDT18_015`)
 * 회사코드와 구매조직은 `1100`으로 고정됩니다.
@@ -122,9 +120,6 @@
 ---
 
 ### 3. 프로그램 개발 아키텍처
-
-프로젝트의 유지보수성 향상을 위해 SAP 표준 레포트 지향 인클루드 구조 설계를 채택하여 구성했습니다.
-
 ```text
 ZPROJECT18_00X (Main Executable Report)
  ├── ZPROJECT18_00X_TOP : 변수, 내부 테이블, Work Area, ALV 인스턴스 전역 정의
